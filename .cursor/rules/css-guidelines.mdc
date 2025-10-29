@@ -1,0 +1,36 @@
+---
+globs: *.css
+description: CSS styling guidelines for the timeline website
+---
+
+# CSS Styling Guidelines
+
+## Color Variables
+Always use CSS custom properties defined in `:root` for colors:
+- `--primary-color`: Deep blue (#003049) for main elements
+- `--secondary-color`: Vibrant red (#D62828) for accents
+- `--accent-color`: Bright orange (#F77F00) for highlights
+- `--highlight-color`: Golden yellow (#FCBF49) for active states
+- `--background`: Dark blue (#003049) for main background
+- `--card-background`: Creamy beige (#EAE2B7) for card backgrounds
+- `--text-primary`: Light color (#EAE2B7) for main text
+- `--text-secondary`: Golden yellow (#FCBF49) for secondary text
+
+## Design Principles
+- **No gradients**: Use solid colors only for clean appearance
+- **Dark theme**: Background should be dark blue, cards should be light
+- **Consistent spacing**: Use CSS variables for margins, padding, and transitions
+- **Responsive**: Timeline adjusts from 900px desktop to full-width mobile
+- **Smooth animations**: Use `cubic-bezier(0.4, 0, 0.2, 1)` for transitions
+
+## Timeline Layout
+- Timeline line positioned at `left: 1.5rem`
+- Timeline dots at `left: 1.5rem` with `transform: translateX(-50%)`
+- Content width: `calc(100% - 3rem)` with `margin-left: 3rem`
+- Cards use `--card-background` with subtle shadows
+
+## Illustration Placeholders
+- Use `.illustration-placeholder` class for pencil drawing areas
+- Dashed border with golden yellow color
+- Hover effects for interactivity
+- Responsive sizing for all screen sizes

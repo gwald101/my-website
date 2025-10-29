@@ -1,0 +1,50 @@
+---
+description: Guidelines for adding pencil-drawing-style illustrations to timeline sections
+---
+
+# Illustration Integration Guidelines
+
+## File Organization
+- Store pencil drawings in the [assets/](mdc:assets/) directory
+- Use descriptive filenames: `birth-illustration.png`, `college-sketch.jpg`, etc.
+- Support common formats: PNG, JPG, SVG
+- Optimize images for web (compress without losing quality)
+
+## Replacing Placeholders
+To replace illustration placeholders in [index.html](mdc:index.html):
+
+1. **Replace the illustration-placeholder div**:
+```html
+<div class="card-image">
+    <img src="assets/birth-illustration.png" 
+         alt="Pencil drawing representing birth chapter" 
+         class="timeline-illustration">
+</div>
+```
+
+2. **Add CSS for illustrations** in [styles.css](mdc:styles.css):
+```css
+.timeline-illustration {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.timeline-illustration:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+```
+
+## Design Considerations
+- **Style**: Pencil-drawing aesthetic should be consistent across all illustrations
+- **Size**: Images should be responsive and fit well within card layouts
+- **Color**: Consider how illustrations work with the dark blue background
+- **Consistency**: Maintain similar artistic style and composition across chapters
+
+## Responsive Behavior
+- Images should scale appropriately on mobile devices
+- Maintain aspect ratios to prevent distortion
+- Consider different image sizes for different screen resolutions

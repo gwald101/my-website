@@ -1,0 +1,44 @@
+---
+globs: *.js
+description: JavaScript development guidelines for timeline interactions
+---
+
+# JavaScript Guidelines
+
+## Timeline Website Class
+The main functionality is handled by the `TimelineWebsite` class in [script.js](mdc:script.js):
+
+### Key Methods
+- `setupIntersectionObserver()`: Handles scroll-triggered animations
+- `setupScrollProgress()`: Updates timeline line fill based on scroll position
+- `addTimelineSection()`: Dynamically adds new timeline sections
+- `createTimelineSection()`: Generates HTML for new sections
+
+## Animation Principles
+- Use Intersection Observer API for scroll-triggered animations
+- Threshold: 0.3 with rootMargin: '0px 0px -100px 0px'
+- Add 'visible' class to trigger CSS animations
+- Smooth scrolling behavior for all internal navigation
+
+## Timeline Section Structure
+When creating new sections, use this data structure:
+```javascript
+{
+    id: 'section-id',
+    title: 'Section Title',
+    date: 'Date Range',
+    description: 'Section description',
+    tags: ['tag1', 'tag2', 'tag3']
+}
+```
+
+## DOM Manipulation
+- Always use modern JavaScript (ES6+)
+- Prefer `querySelector` and `querySelectorAll`
+- Use `classList` for class management
+- Add event listeners with proper cleanup considerations
+
+## Performance
+- Use `requestAnimationFrame` for smooth animations
+- Debounce scroll events when possible
+- Cache DOM elements to avoid repeated queries

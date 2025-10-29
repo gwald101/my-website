@@ -1,0 +1,54 @@
+---
+globs: *.html
+description: HTML structure guidelines for timeline sections
+---
+
+# HTML Structure Guidelines
+
+## Timeline Section Template
+Each timeline section follows this structure in [index.html](mdc:index.html):
+
+```html
+<section class="timeline-section" id="section-id">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+        <div class="timeline-card">
+            <div class="card-header">
+                <h2 class="chapter-title">Title</h2>
+                <span class="chapter-date">Date Range</span>
+            </div>
+            <div class="card-image">
+                <div class="illustration-placeholder">
+                    <span class="placeholder-text">Pencil Illustration</span>
+                    <div class="placeholder-icon">✏️</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="chapter-description">Description text</p>
+                <div class="chapter-tags">
+                    <span class="tag">Tag1</span>
+                    <span class="tag">Tag2</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+## Semantic HTML
+- Use semantic section elements for each timeline chapter
+- Proper heading hierarchy (h1 for hero, h2 for chapter titles)
+- Descriptive IDs for timeline sections
+- Alt text for all images (when added)
+
+## Accessibility
+- Maintain proper heading structure
+- Use descriptive link text
+- Ensure sufficient color contrast
+- Include skip navigation for keyboard users
+
+## Content Guidelines
+- Chapter titles should be concise and descriptive
+- Date ranges should be clear and consistent
+- Descriptions should be engaging and personal
+- Tags should be relevant and consistent across sections

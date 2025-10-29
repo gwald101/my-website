@@ -1,0 +1,33 @@
+---
+alwaysApply: true
+description: Personal Timeline Website Project Structure and Guidelines
+---
+
+# Personal Timeline Website Project
+
+## Project Overview
+This is a personal timeline website built with vanilla HTML/CSS/JavaScript that tells a life story through six interactive chapters with smooth animations and a dark blue-dominant design.
+
+## Key Files
+- [index.html](mdc:index.html) - Main HTML structure with six timeline sections
+- [styles.css](mdc:styles.css) - CSS with Warm Autumn Glow color scheme and responsive design
+- [script.js](mdc:script.js) - JavaScript for scroll animations and timeline interactions
+- [personal-timeline-website.plan.md](mdc:personal-timeline-website.plan.md) - Project documentation and status
+- [assets/](mdc:assets/) - Directory for pencil-drawing-style illustrations
+
+## Design System
+- **Color Scheme**: Dark blue-dominant Warm Autumn Glow palette
+  - Primary: Deep blue (#003049) - dominant background
+  - Secondary: Vibrant red (#D62828) - accents
+  - Accent: Bright orange (#F77F00) - highlights
+  - Highlight: Golden yellow (#FCBF49) - active elements
+  - Background: Creamy beige (#EAE2B7) - card backgrounds
+- **Layout**: Left-aligned timeline with compact responsive design
+- **No gradients**: Solid colors throughout for clean appearance
+
+## Development Guidelines
+- Use CSS variables for color consistency
+- Maintain responsive design (max-width: 900px desktop, 800px tablet)
+- Timeline sections use illustration placeholders ready for pencil drawings
+- All animations use smooth transitions with cubic-bezier easing
+- JavaScript uses Intersection Observer for scroll-triggered animations

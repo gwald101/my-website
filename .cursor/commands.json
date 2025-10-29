@@ -1,0 +1,79 @@
+{
+  "commands": [
+    {
+      "name": "Open Timeline Website",
+      "command": "open index.html",
+      "description": "Open the personal timeline website in the default browser"
+    },
+    {
+      "name": "Start Local Server",
+      "command": "python3 -m http.server 8000",
+      "description": "Start a local development server on port 8000"
+    },
+    {
+      "name": "Validate HTML",
+      "command": "npx html-validate index.html",
+      "description": "Validate HTML structure and accessibility"
+    },
+    {
+      "name": "Minify CSS",
+      "command": "npx clean-css-cli -o styles.min.css styles.css",
+      "description": "Create minified version of CSS for production"
+    },
+    {
+      "name": "Minify JavaScript",
+      "command": "npx terser script.js -o script.min.js",
+      "description": "Create minified version of JavaScript for production"
+    },
+    {
+      "name": "Optimize Images",
+      "command": "npx imagemin assets/* --out-dir=assets/optimized",
+      "description": "Optimize all images in the assets directory"
+    },
+    {
+      "name": "Check Responsive Design",
+      "command": "npx lighthouse http://localhost:8000 --only-categories=performance,accessibility,best-practices",
+      "description": "Run Lighthouse audit for performance and accessibility"
+    },
+    {
+      "name": "Deploy to GitHub Pages",
+      "command": "git add . && git commit -m 'Update timeline website' && git push origin main",
+      "description": "Commit and push changes to deploy to GitHub Pages"
+    },
+    {
+      "name": "Create New Timeline Section",
+      "command": "node -e \"console.log('Use the addTimelineSection() method in script.js to add new sections dynamically')\"",
+      "description": "Show instructions for adding new timeline sections"
+    },
+    {
+      "name": "Update Color Scheme",
+      "command": "echo 'Update CSS variables in styles.css :root section to change colors'",
+      "description": "Show instructions for updating the color scheme"
+    },
+    {
+      "name": "Test Mobile View",
+      "command": "open -a 'Google Chrome' --args --user-agent='Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X)' http://localhost:8000",
+      "description": "Open website in Chrome with mobile user agent for testing"
+    },
+    {
+      "name": "Generate Favicon",
+      "command": "npx favicon-generator-cli --input=assets/favicon-source.png --output=favicon",
+      "description": "Generate favicon files from a source image"
+    },
+    {
+      "name": "Create Sitemap",
+      "command": "echo '<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://yourusername.github.io/my-website/</loc><lastmod>$(date -u +%Y-%m-%d)</lastmod></url></urlset>' > sitemap.xml",
+      "description": "Generate a sitemap.xml for SEO"
+    },
+    {
+      "name": "Backup Project",
+      "command": "tar -czf timeline-website-backup-$(date +%Y%m%d).tar.gz *.html *.css *.js *.md assets/ .cursor/",
+      "description": "Create a compressed backup of the entire project"
+    },
+    {
+      "name": "Check File Sizes",
+      "command": "ls -lah *.html *.css *.js && du -sh assets/",
+      "description": "Check the file sizes of all main files and assets directory"
+    }
+  ]
+}
